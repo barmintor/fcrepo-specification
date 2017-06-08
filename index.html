@@ -387,19 +387,17 @@
 
       <section id='external-content'>
         <h3>External Binary Content</h3>
-        <p id='message-external-body-variability' class='informative'>
-          <blockquote>
-            Non-normative note: Variability among client types and locations may mean that LDP-NR
-            content is addressed in ways that are external to the Fedora server but not resolvable
-            by all clients. This specification describes the use of <code>Content-Type: message/external-body</code>
-            values to signal, on POST or PUT, that the Fedora server should should not consider the
-            request entity to be the LDP-NR's content, but that a <code>Content-Type</code> value will signal a
-            name or address at which the content might be retreived. The <code>url</code>
-            and <code>local-file</code> type values motivate this specification, but a Fedora server
-            may support any type parameters per the requirements for advertisement and
-            rejection specified here.
-          </blockquote>
-        </p>
+        <blockquote id='message-external-body-variability' class='informative'>
+          Non-normative note: Variability among client types and locations may mean that LDP-NR
+          content is addressed in ways that are external to the Fedora server but not resolvable
+          by all clients. This specification describes the use of <code>Content-Type: message/external-body</code>
+          values to signal, on POST or PUT, that the Fedora server should should not consider the
+          request entity to be the LDP-NR's content, but that a <code>Content-Type</code> value will signal a
+          name or address at which the content might be retreived. The <code>url</code>
+          and <code>local-file</code> type values motivate this specification, but a Fedora server
+          may support any type parameters per the requirements for advertisement and
+          rejection specified here.
+        </blockquote>
         <p id='message-external-body-accept-post'>
           Fedora servers that support LDP-NR with <code>message/external-body</code>
           MUST advertise that support in the <code>Accept-Post</code> response
